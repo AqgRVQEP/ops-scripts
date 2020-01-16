@@ -1,12 +1,11 @@
 #!/bin/bash
 # validAlphaNum -- 确保输入内容仅限于字母和数字
 
-validAlphaNum()
-{
+validAlphaNum() {
   # 返回值：如果输入内容全部都是字母和数字，那么返回0；否则，返回1
   # 删除所有不符合要求的字符
   validchars="$(echo $1 | sed -e 's/[^[:alnum:]]//g')"
-  
+
   if [ "$validchars" = "$1" ]; then
     return 0
   else

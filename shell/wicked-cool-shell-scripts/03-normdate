@@ -3,24 +3,25 @@
 # 该脚本随后将作为脚本#7的辅助函数。
 # 如果没有错误，那么以0值退出。
 
-monthNumToName()
-{
+monthNumToName() {
   # 将变量month设置为相应的值。
   case "$1" in
-    1 ) month="Jan" ;;
-    2 ) month="Feb" ;;
-    3 ) month="Mar" ;;
-    4 ) month="Apr" ;;
-    5 ) month="May" ;;
-    6 ) month="Jun" ;;
-    7 ) month="Jul" ;;
-    8 ) month="Aug" ;;
-    9 ) month="Sep" ;;
-    10 ) month="Oct" ;;
-    11 ) month="Nov" ;;
-    12 ) month="Dec" ;;
-    * ) echo "$0: Unknown numeric month value $1" >&2
-        exit 1
+  1) month="Jan" ;;
+  2) month="Feb" ;;
+  3) month="Mar" ;;
+  4) month="Apr" ;;
+  5) month="May" ;;
+  6) month="Jun" ;;
+  7) month="Jul" ;;
+  8) month="Aug" ;;
+  9) month="Sep" ;;
+  10) month="Oct" ;;
+  11) month="Nov" ;;
+  12) month="Dec" ;;
+  *)
+    echo "$0: Unknown numeric month value $1" >&2
+    exit 1
+    ;;
   esac
   return 0
 }
@@ -30,7 +31,7 @@ monthNumToName()
 # 输入验证。
 #if [ $# -ne 3 ] ; then
 #  echo "Usage: $0 month day year" >&2
-#  echo "Formats are August 3 1962 and 8 3 1962" >&2 
+#  echo "Formats are August 3 1962 and 8 3 1962" >&2
 #  exit 1
 #fi
 
