@@ -1,0 +1,5 @@
+#!/bin/bash
+
+read -p "请输入用户(回车默认root):" user
+user${name:-root}
+echo $name
