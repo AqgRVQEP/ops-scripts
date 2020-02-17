@@ -1,0 +1,13 @@
+nginx:
+  image: nginx:1.12.2-alpine-perl
+  container_name: nginx
+  restart: always
+  ports:
+    - "80:80"
+    - "443:443"
+  volumes:
+    - ./conf.d:/etc/nginx/conf.d
+    - ./certs:/etc/nginx/certs:ro
+    - ./log:/var/log/nginx
+    - ./html:/usr/share/nginx/html
+    - ./nginx.conf:/etc/nginx/nginx.conf
