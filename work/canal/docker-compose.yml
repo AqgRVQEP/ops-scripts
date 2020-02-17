@@ -15,7 +15,7 @@ canal-server:
     - LANG=en_US.utf8
     - TZ=Asia/Shanghai
     - canal.destinations=test
-    - canal.instance.master.address=192.168.50.41:3306
+    - canal.instance.master.address="{MYSQL_IP_PORT}"
     - canal.instance.dbUsername=canal
     - canal.instance.dbPassword=canal
     - canal.instance.connectionCharset=UTF-8
