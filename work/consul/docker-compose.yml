@@ -1,0 +1,11 @@
+consul:
+  image: consul:1.5.0
+  hostname: "192.168.50.41"
+  container_name: consul_server
+  privileged: false
+  restart: always
+  ports:
+  - 8500:8500
+  volumes:
+  - ./data:/consul/data
+  command: agent -server -bootstrap -ui -node=1 -bind=0.0.0.0 -client=0.0.0.0 -datacenter=dc1
