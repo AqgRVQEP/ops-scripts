@@ -1,0 +1,19 @@
+apollo-all-in-one:
+  container_name: apollo-dev
+  image: idoop/docker-apollo:1.5.1   # 查看version
+  restart: always
+  #  如果portal出现504错误，则使用"host"模式
+  network_mode: "host"
+  environment:
+    # 开启Potal,默认端口:8070
+    # 配置数据库ServerConfig表apollo.portal.envs字段值为要开启的环境，这里是：dev
+    PORTAL_DB: "${PORTAL_DB_URL}"
+    #PORTAL_DB_USER: apollo
+    #PORTAL_DB_PWD: "{PASSWORD}"
+    PORTAL_DB_USER: "{USER}"
+    PORTAL_DB_PWD: "{PASSWORD}"
+    # 开启Dev环境，默认端口Admin:8090,Config:8080
+    # 配置数据库ServerConfig表eureka.service.url字段值为http://localhost:8080/eureka/
+    DEV_DB: "${DEV_DB_URL}"
+    DEV_DB_USER: "{USER}"
+    DEV_DB_PWD: "{PASSWORD}"
