@@ -7,7 +7,7 @@ MIDDLEWAREMIDDLEWARE_DIR=/data
 sudo mkdir -p /$MIDDLEWAREMIDDLEWARE_DIR/canal
 
 sudo cp docker-compose.yml $MIDDLEWAREMIDDLEWARE_DIR/canal
-sudo cp .env $MIDDLEWAREMIDDLEWARE_DIR/canal
+sudo cp ../.env $MIDDLEWAREMIDDLEWARE_DIR/canal
 
 cd /$MIDDLEWAREMIDDLEWARE_DIR/canal && /usr/bin/docker-compose up -d
 

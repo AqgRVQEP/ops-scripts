@@ -9,7 +9,7 @@ MIDDLEWAREMIDDLEWARE_DIR=/data
 sudo mkdir -p /$MIDDLEWAREMIDDLEWARE_DIR/apollo
 
 sudo cp docker-compose.yml $MIDDLEWAREMIDDLEWARE_DIR/apollo
-sudo cp .env $MIDDLEWAREMIDDLEWARE_DIR/apollo
+sudo cp ../.env $MIDDLEWAREMIDDLEWARE_DIR/apollo
 
 cd /$MIDDLEWAREMIDDLEWARE_DIR/apollo && 
 

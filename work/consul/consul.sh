@@ -7,7 +7,7 @@ MIDDLEWAREMIDDLEWARE_DIR=/data
 sudo mkdir -p /$MIDDLEWAREMIDDLEWARE_DIR/consul
 
 sudo cp docker-compose.yml $MIDDLEWAREMIDDLEWARE_DIR/consul
-sudo cp .env $MIDDLEWAREMIDDLEWARE_DIR/consul
+sudo cp ../.env $MIDDLEWAREMIDDLEWARE_DIR/consul
 
 cd /$MIDDLEWAREMIDDLEWARE_DIR/consul && /usr/bin/docker-compose up -d
 
