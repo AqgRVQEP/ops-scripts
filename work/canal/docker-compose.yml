@@ -1,0 +1,25 @@
+canal-server:
+    image: canal/canal-server:v1.1.4
+    hostname: "{HOST_IP}"
+    container_name: canal-server
+    privileged: false
+    restart: always
+    ports:
+    - 11110/tcp:11110/tcp
+    - 11111/tcp:11111/tcp
+    - 11112/tcp:11112/tcp
+    - 9100/tcp:9100/tcp
+    volumes:
+    - ./logs/:/home/admin/canal-server/logs
+    environment:
+    - LANG=en_US.utf8
+    - TZ=Asia/Shanghai
+    - canal.destinations=test
+    - canal.instance.master.address=192.168.50.41:3306
+    - canal.instance.dbUsername=canal
+    - canal.instance.dbPassword=canal
+    - canal.instance.connectionCharset=UTF-8
+    - canal.instance.tsdb.enable=true
+    - canal.instance.gtidon=false
+    - "ES_JAVA_OPTS=-Xms4096m -Xmx4096m"
+  
